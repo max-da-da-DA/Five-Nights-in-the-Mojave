@@ -1,0 +1,12 @@
+{
+  "sheet": "behaviors",
+  "note": "One row per behavior. Each row generates one per-frame/per-tick update function. nvseHook = the xNVSE/GECK facility the check relies on (to be confirmed in the running game).",
+  "columns": ["id","description","trigger","action","paramName","paramBase","paramPerLevel","nvseHook","verified"],
+  "rows": [
+    {"id":"dark_mover","description":"Only moves when the player's surroundings are dark","trigger":"light_level_at_player < threshold","action":"move_toward_player","paramName":"lightThreshold","paramBase":25,"paramPerLevel":1.5,"nvseHook":"GetLightLevel (or cell/time proxy)","verified":false},
+    {"id":"freeze_when_watched","description":"Stops completely while inside the player's view cone","trigger":"player_facing_angle < cone","action":"freeze_else_move_toward_player","paramName":"viewConeDegrees","paramBase":70,"paramPerLevel":-1.5,"nvseHook":"GetHeadingAngle / IsInPlayersView","verified":false},
+    {"id":"noise_seeker","description":"Heads for the last place the player made noise","trigger":"player_gunshot_or_sprint","action":"move_to_noise_position","paramName":"hearingRadius","paramBase":1500,"paramPerLevel":150,"nvseHook":"GetPlayerLastWeaponFire / sprint state","verified":false},
+    {"id":"fast_fragile","description":"Rushes the player in short bursts, then retreats","trigger":"timer","action":"burst_then_retreat","paramName":"burstSeconds","paramBase":3,"paramPerLevel":0.1,"nvseHook":"timer + MoveTo","verified":false},
+    {"id":"relentless_stalker","description":"Always walks toward the player, ignores damage, repelled only briefly by a lit flare or fire","trigger":"always","action":"move_toward_player","paramName":"repelSeconds","paramBase":8,"paramPerLevel":-0.3,"nvseHook":"PathToReference / AI package","verified":false}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "sheet": "mascots",
+  "note": "One row per mascot. Each row generates one mascot struct/spawn record. Original characters, inspired by UCN. baseCreature = candidate vanilla creature to reskin/reuse (read from the player's own copy); null = still to be chosen.",
+  "columns": ["id","displayName","behaviorId","baseCreature","speedBase","speedPerLevel","healthBase","healthPerLevel","damageBase","damagePerLevel","killable","spawnWeight","verified"],
+  "rows": [
+    {"id":"gloom_bear","displayName":"Gloom Bear","behaviorId":"dark_mover","baseCreature":"Nightstalker","speedBase":0.8,"speedPerLevel":0.04,"healthBase":150,"healthPerLevel":10,"damageBase":8,"damagePerLevel":1.0,"killable":true,"spawnWeight":3,"verified":false},
+    {"id":"statue_bunny","displayName":"Statue Bunny","behaviorId":"freeze_when_watched","baseCreature":null,"speedBase":1.2,"speedPerLevel":0.06,"healthBase":120,"healthPerLevel":8,"damageBase":12,"damagePerLevel":1.2,"killable":false,"spawnWeight":3,"verified":false},
+    {"id":"noise_hound","displayName":"Noise Hound","behaviorId":"noise_seeker","baseCreature":"Wild Dog","speedBase":1.4,"speedPerLevel":0.05,"healthBase":90,"healthPerLevel":6,"damageBase":6,"damagePerLevel":0.8,"killable":true,"spawnWeight":2,"verified":false},
+    {"id":"scrap_fox","displayName":"Scrap Fox","behaviorId":"fast_fragile","baseCreature":null,"speedBase":2.0,"speedPerLevel":0.08,"healthBase":40,"healthPerLevel":3,"damageBase":5,"damagePerLevel":0.6,"killable":true,"spawnWeight":2,"verified":false},
+    {"id":"slow_chef","displayName":"The Slow Chef","behaviorId":"relentless_stalker","baseCreature":null,"speedBase":0.5,"speedPerLevel":0.03,"healthBase":500,"healthPerLevel":25,"damageBase":25,"damagePerLevel":2.0,"killable":false,"spawnWeight":1,"verified":false}
+  ]
+}

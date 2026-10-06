@@ -1,0 +1,13 @@
+{
+  "sheet": "terminal_menu",
+  "note": "One row per terminal entry in Doc Mitchell's house. Each row generates one menu item and its handler. mascotId must exist in mascots.json; hookId must exist in game_hooks.json.",
+  "columns": ["id","label","kind","mascotId","hookId","min","max","default","verified"],
+  "rows": [
+    {"id":"set_gloom_bear","label":"Gloom Bear","kind":"slider","mascotId":"gloom_bear","hookId":null,"min":0,"max":20,"default":5,"verified":false},
+    {"id":"set_statue_bunny","label":"Statue Bunny","kind":"slider","mascotId":"statue_bunny","hookId":null,"min":0,"max":20,"default":5,"verified":false},
+    {"id":"set_noise_hound","label":"Noise Hound","kind":"slider","mascotId":"noise_hound","hookId":null,"min":0,"max":20,"default":5,"verified":false},
+    {"id":"set_scrap_fox","label":"Scrap Fox","kind":"slider","mascotId":"scrap_fox","hookId":null,"min":0,"max":20,"default":5,"verified":false},
+    {"id":"set_slow_chef","label":"The Slow Chef","kind":"slider","mascotId":"slow_chef","hookId":null,"min":0,"max":20,"default":3,"verified":false},
+    {"id":"start_night","label":"Begin the Night","kind":"action","mascotId":null,"hookId":"night_start","min":null,"max":null,"default":null,"verified":false}
+  ]
+}

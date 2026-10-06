@@ -1,0 +1,13 @@
+{
+  "sheet": "game_hooks",
+  "note": "Every point where the mod touches New Vegas. Each row generates one hook. Fill the editor IDs/form IDs from the player's installed game; null = still to look up.",
+  "columns": ["id","purpose","gameSystem","target","trigger","verified"],
+  "rows": [
+    {"id":"terminal_place","purpose":"Place the Custom Night terminal in Doc Mitchell's house","gameSystem":"cell/reference","target":null,"trigger":"new game / first load in Goodsprings","verified":false},
+    {"id":"night_start","purpose":"Set time to 20:00, spawn nothing until the terminal's Begin is chosen, then start the spawn loop","gameSystem":"GameHour, quest script","target":null,"trigger":"terminal action","verified":false},
+    {"id":"spawn_loop","purpose":"Spawn mascots out of the player's sight using difficulty_scale bands","gameSystem":"PlaceAtMe, quest stage","target":null,"trigger":"timer from night_start","verified":false},
+    {"id":"win_6am","purpose":"At 06:00 game time, despawn all mascots and give the reward","gameSystem":"GameHour check","target":null,"trigger":"GameHour >= 6","verified":false},
+    {"id":"player_death","purpose":"On death, clear mascots and reset the night state","gameSystem":"OnDeath / load handler","target":null,"trigger":"player death","verified":false},
+    {"id":"reward","purpose":"Caps and an item scaled by the sum of the chosen levels","gameSystem":"AddItem","target":null,"trigger":"win_6am","verified":false}
+  ]
+}

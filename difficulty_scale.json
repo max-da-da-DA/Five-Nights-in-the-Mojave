@@ -1,0 +1,12 @@
+{
+  "sheet": "difficulty_scale",
+  "note": "Maps each mascot's 0-20 setting to spawn and aggression. Level 0 = mascot disabled. Per-mascot stats = base + perLevel * level (see mascots.json), multiplied by aggressionMult.",
+  "columns": ["band","minLevel","maxLevel","spawnIntervalSec","maxAlive","aggressionMult","verified"],
+  "rows": [
+    {"band":"off","minLevel":0,"maxLevel":0,"spawnIntervalSec":null,"maxAlive":0,"aggressionMult":0,"verified":false},
+    {"band":"easy","minLevel":1,"maxLevel":5,"spawnIntervalSec":240,"maxAlive":1,"aggressionMult":0.8,"verified":false},
+    {"band":"medium","minLevel":6,"maxLevel":10,"spawnIntervalSec":150,"maxAlive":1,"aggressionMult":1.0,"verified":false},
+    {"band":"hard","minLevel":11,"maxLevel":15,"spawnIntervalSec":90,"maxAlive":2,"aggressionMult":1.3,"verified":false},
+    {"band":"extreme","minLevel":16,"maxLevel":20,"spawnIntervalSec":45,"maxAlive":3,"aggressionMult":1.7,"verified":false}
+  ]
+}
